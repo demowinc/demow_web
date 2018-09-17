@@ -1,0 +1,36 @@
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ 
+body {
+	background-image:url(../imagenes/fondowebazul.jpg); /* Nuestra imagen de fondo */
+	background-repeat:no-repeat; /* Indicamos que no se repetira */
+	background-size:cover; /* Encajamos la imagen al 100% del ancho */
+	background-attachment: fixed; /* Establecemos una posicion fija para la imagen */
+}
+
+#Barra{
+	background-image: url(../imagenes/barradenavegacion.jpg);
+	background-size: cover;
+
+	
+  }
+ 
+
+  #navbar{
+	  font-family: BENGUIATGOTHICSTD-MEDIUM;
+	  font-weight: bold;
+  }
+
+  footer {
+	
+	background: #000000;
+}
+
+
+ 
+  
