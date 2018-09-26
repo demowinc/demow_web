@@ -1,37 +1,52 @@
 <!doctype html>
 <html lang="es">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Archivos Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="Fuente/.css">
-    <link rel="stylesheet" href="css/estilos.css">
+        <!-- Archivos Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="Fuente/.css">
+        <link rel="stylesheet" href="css/estilos.css">
 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.waterwheelCarousel.min.js"></script>
+        <script type="text/javascript">
+         $(document).ready(function () {
+             var carousel = $("#carousel").waterwheelCarousel({
+                 flankingItems: 3,
+                 movingToCenter: function ($item) {
+                     $('#callback-output').html('Descripcion de imagen : ' + $item.attr('id') + '<br/>');
+                     $('#tituloImagen').html('Imagen ' + $item.attr('id') + '<br/>');
+                 },
+                 clickedCenter: function ($item) {
+                     $('#callback-output').html('Click en imagen ' + $item.attr('id') + '<br/>');
+                 }
+             });
+         });
+        </script>
 
+        <title>Demow</title>
+    </head>
 
-    <title>Demow</title>
-</head>
+    <body>
 
-<body>
-        
-    <nav class="navbar navbar-light navbar-expand-lg bg-light" id="Barra">
-        <!-- Logo -->
-        <a href="navbar.html" class="navbar-brand navbar-header">
-            <img src="imagenes/Demow.png" class="img-fluid" width="150" height="85" alt="">
-        </a>
-        <!-- Collapse -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
-            aria-label="Menu de Navegacion">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Contenido del Navbar-->
-        <div class="collapse navbar-collapse" id="navbar">
-                
+        <nav class="navbar navbar-light navbar-expand-lg bg-light" id="Barra">
+            <!-- Logo -->
+            <a href="navbar.html" class="navbar-brand navbar-header">
+                <img src="imagenes/Demow.png" class="img-fluid" width="150" height="85" alt="">
+            </a>
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                    aria-label="Menu de Navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Contenido del Navbar-->
+            <div class="collapse navbar-collapse" id="navbar">
+
                 <ul class="navbar-nav mx-auto mt-5">
                     <li class="nav-item">
                         <a href="#" class="nav-link text-white">Areas</a>
@@ -52,62 +67,68 @@
                         <a href="#" class="nav-link text-white">Eventos</a>
                     </li>
                 </ul>
-    
-    
-    
+
+
+
                 <form action="" class="form-inline my-2 my-sm-0">
                     <input type="text" class="form-control mr-sm-2" placeholder="Buscar" arial-label="Buscar">
                     <button class="btn btn-primary my-5 my-sm-2" type="submit">Buscar</button>
                 </form>
-    
-    
+
+
                 <ul class="navbar-nav">
-    
+
                     <li class="nav-item ">
                         <a href="#" class="nav-link pt-0 text-white">Iniciar Sesion</a>
                         <a href="#" class="nav-link pt-0 text-white">Registrarse</a>
                         <a href="#" class="nav-link pt-0 text-white">Ayuda</a>
-    
+
                     </li>
                 </ul>
-    
+
             </div>
-    </nav>
-    
-    <div class="container">
-        <div class="row">
-        
+        </nav>
+
+        <div class="container" id="carouselContainer">
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="carousel">
+                        <a href="#"><img src="imagenes/vr.jpeg" id="item-1" /></a>
+                        <a href="#"><img src="imagenes/programming.jpg" id="item-2" /></a>
+                        <a href="#"><img src="imagenes/hardware.jpg" id="item-3" /></a>
+                        <a href="#"><img src="imagenes/electronics.jpeg" id="item-4" /></a>
+                        <a href="#"><img src="imagenes/computer.jpeg" id="item-5" /></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2 id="tituloImagen"></h2>
+                    <div id="callback-output">
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!--
+             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+             crossorigin="anonymous"></script>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+             crossorigin="anonymous"></script>
+             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+             crossorigin="anonymous"></script>
+
+             <script type="text/JavaScript" src="js/jquery-3.3.1.min.js"></script>
+             <script type="text/JavaScript" src="js/bootstrap.min.js"></script>
+             <script type="text/JavaScript" src="js/popper.min.js"></script>
+             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+           - -->
 
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
-
-
-     <!-- --
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
-
-    <script type="text/JavaScript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/JavaScript" src="js/bootstrap.min.js"></script>
-    <script type="text/JavaScript" src="js/popper.min.js"></script>
-    -->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
-
-
-
-    <footer class="row fixed-bottom ">
-        <div class="col">
+        <footer class="row fixed-bottom ">
+            <div class="col">
             <h4>Footer</h4>
         </div>
     </footer>
