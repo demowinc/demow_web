@@ -41,14 +41,15 @@ body {
 }
 
 .info-trigger{
-	padding: 1%;
-	margin: 10px;
 }
 
 .info-col{
 	border-left-width: 10px;
 	border-color: aliceblue;
 	border-radius: 10px;
+	margin: 10px;
+	padding: 20px;
+
 }
 
 .info-trigger .info-col:hover{
