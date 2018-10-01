@@ -31,6 +31,33 @@ body {
 	background: #000000;
 }
 
+/* Nuevo */
+
+.info-row{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	
+}
+
+.info-trigger{
+	padding: 1%;
+	margin: 10px;
+}
+
+.info-col{
+	border-left-width: 10px;
+	border-color: aliceblue;
+	border-radius: 10px;
+}
+
+.info-trigger .info-col:hover{
+	color:	greenyellow;
+	background-color: rgba(44, 68, 1,0.7);
+
+}
+
+
 
 
  

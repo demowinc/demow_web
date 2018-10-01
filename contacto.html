@@ -11,8 +11,8 @@
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="Fuente/.css">
     <link rel="stylesheet" href="css/estilos.css">
-
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
 
     <title>Demow</title>
 </head>
@@ -74,44 +74,34 @@
             </div>
     </nav>
     
-    <div class="container text-white">
-        <div class="row">
-            <div class="col-sm-6 img-fluid">
-                <div class="container">
-                    <a data-toggle="modal" data-target="#Gaming">
-                        <img src="imagenes/gaming.jpg" class="img-fluid" alt="Responsive image">
-                    </a>
-                </div>
-                
-            </div>
-            <div class="col-sm-6 img-fluid">
-                <div class="container ">
-                    <a data-toggle="modal" data-target="#Gaming">
-                        <img src="imagenes/programming.jpg" class="img-fluid" alt="Responsive image">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-5 img-fluid">
-                    <div class="container">
-                            <a data-toggle="modal" data-target="#Gaming">
-                                <img src="imagenes/hardware.jpg" class="img-fluid" alt="Responsive image">
-                            </a>
+    <section>
+            <div class="container text-white info-trigger">
+                <div class="info-row">
+                    <div class="info-col">
+                        <a data-toggle="modal" data-target="#Gaming">
+                            <i class="fas fa-gamepad fa-10x"></i>
+                        </a>
                     </div>
+                    <div class="info-col">
+                        <a data-toggle="modal" data-target="#Developing">
+                            <i class="fas fa-terminal fa-10x"></i>                    
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a data-toggle="modal" data-target="#Hardware">
+                            <i class="fas fa-cogs fa-10x"></i>                            
+                        </a>
+                    </div>
+                    
+                </div>    
             </div>
-        </div> 
-    </div>
-
+            
+    </section>
+   
     
-    
-       <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Gaming">
-            Launch demo modal
-          </button>
       <!-- Modal -->
 
-      <div class="modal" tabindex="-1" role="dialog" id="Gaming">
+    <div class="modal" tabindex="-1" role="dialog" id="Gaming">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -139,13 +129,80 @@
                             </p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
                 </div>
               </div>
             </div>
-        </div>
+    </div>
+        
+    <div class="modal" tabindex="-1" role="dialog" id="Developing">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Desarrollo de Software</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-auto">
+                                <img src="imagenes/programming.jpg" class="img-fluid" alt="Responsive image">
+                                <p>
+                                    <h5>Teléfono:
+                                        <a href="#!" >2222345678</a>
+                                    </h5>         
+                                </p>
+                                <p>
+                                    <h5>Correo:
+                                        <a href="#!" class="badge badge-primary">developing@demow.com</a>
+                                    </h5>
+                                </p>
+                                <p>
+                                    <h5>Otro:
+                                        <a href="#!" >Social Media</a>
+                                    </h5>
+                                </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
+                    </div>
+                  </div>
+                </div>
+    </div>    
 
+    <div class="modal" tabindex="-1" role="dialog" id="Hardware">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Hardware</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body mx-auto">
+                            <img src="imagenes/hardware.jpg" class="img-fluid" alt="Responsive image">
+                            <p>
+                                <h5>Teléfono:
+                                    <a href="#!" >2222345678</a>
+                                </h5>         
+                            </p>
+                            <p>
+                                <h5>Correo:
+                                    <a href="#!" class="badge badge-primary">hardware@demow.com</a>
+                                </h5>
+                            </p>
+                            <p>
+                                <h5>Otro:
+                                    <a href="#!" >Social Media</a>
+                                </h5>
+                            </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
+                </div>
+              </div>
+            </div>
+        </div> 
+        
       <!-- /Modal-->
 
       <!-- --
