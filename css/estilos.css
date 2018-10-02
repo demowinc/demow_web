@@ -28,9 +28,37 @@ body {
 	background: #000000;
   }
 
+/* Nuevo */
+
+.info-row{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	
+}
+
+.info-trigger{
+}
+
+.info-col{
+	border-left-width: 10px;
+	border-color: aliceblue;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 20px;
+
+}
+
+.info-trigger .info-col:hover{
+	color:	greenyellow;
+	background-color: rgba(44, 68, 1,0.7);
+
+}
+
   #carouselContainer {
       padding-top: 20px;
   }
+
 
   #callback-output {
       color:white;
