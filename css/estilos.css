@@ -5,7 +5,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
- 
+
 body {
 	background-image:url(../imagenes/fondowebazul.jpg); /* Nuestra imagen de fondo */
 	background-repeat:no-repeat; /* Indicamos que no se repetira */
@@ -17,9 +17,7 @@ body {
 	background-image: url(../imagenes/barradenavegacion.jpg);
 	background-size: cover;
 
-	
   }
- 
 
   #navbar{
 	  font-family: BENGUIATGOTHICSTD-MEDIUM;
@@ -27,9 +25,8 @@ body {
   }
 
   footer {
-	
 	background: #000000;
-}
+  }
 
 /* Nuevo */
 
@@ -58,8 +55,29 @@ body {
 
 }
 
+  #carouselContainer {
+      padding-top: 20px;
+  }
 
 
+  #callback-output {
+      color:white;
+  }
+  h2 {
+      color: white;
+  }
 
- 
-  
+  #carousel {
+      width:740px;
+      height:450px;
+      clear:both;
+      overflow:hidden;
+  }
+
+  #carousel img {
+      visibility:hidden; /* hide images until carousel can handle them */
+      cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+      overflow: hidden;
+      width: auto;
+      height: auto;
+  }
