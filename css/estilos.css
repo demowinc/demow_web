@@ -28,7 +28,7 @@ body {
 	background: #000000;
   }
 
-/* Nuevo */
+/* Contacto */
 
 .info-row{
 	display: flex;
@@ -54,7 +54,9 @@ body {
 	background-color: rgba(44, 68, 1,0.7);
 
 }
+/* /Contacto */
 
+/* Portafolio */
   #carouselContainer {
       padding-top: 20px;
   }
@@ -81,3 +83,43 @@ body {
       width: auto;
       height: auto;
   }
+
+/* /Portafolio */  
+
+/* Proyectos */
+.project-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-shrink: 0;
+	margin: 20px;
+	border: 1px;
+	border-radius: 15px;
+	padding: 20px, 20px;
+	background-color: rgba(237, 217, 0, 0.7);
+	
+}
+.project-description{
+	margin: 1px;
+	border: 1px;
+	border-radius: 15px;
+	padding: 20px;
+	max-width: 550px;
+
+	
+}
+.project-description-texto{
+	text-align: justify;
+}
+
+.project-picture{
+	max-height: 100%;
+	max-width: 3000px;
+	margin: 1px;
+	padding: 10px 10px;	
+}
+img {
+	max-width:100%;
+	border-radius: 15px;
+}
+/* /Proyectos */
